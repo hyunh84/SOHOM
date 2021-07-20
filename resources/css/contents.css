@@ -5,7 +5,7 @@
 *********************************************************************************************************/
 a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 
-/* button */
+/* button - large */
 [class^="btnLarge"] {display:block;box-sizing:border-box;width:100%;text-align:center;border:1px solid #fff;border-radius:12px;background-color:#fff;outline:none;}
 [class^="btnLarge"] em {display:inline-block;padding:17px 0;line-height:20px;font-size:16px;font-weight:700;color:#404040;vertical-align:top;}
 [class^="btnLarge"]:active {background-color:#e6e6e6;}
@@ -16,6 +16,7 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 .btnLarge03 em {color:#fff;}
 .btnLarge03:active {background-color:#5343cd;}
 
+/* button - mideum */
 [class^="btnMideum"] {display:block;box-sizing:border-box;width:100%;text-align:center;border:1px solid #fff;border-radius:12px;background-color:#fff;outline:none;}
 [class^="btnMideum"] em {display:inline-block;padding:14px 0;line-height:18px;font-size:14px;font-weight:700;color:#404040;vertical-align:top;}
 [class^="btnMideum"]:active {background-color:#e6e6e6;}
@@ -26,6 +27,7 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 .btnMideum03 em {color:#fff;}
 .btnMideum03:active {background-color:#5343cd;}
 
+/* button - tiny */
 [class^="btnTiny"] {display:inline-block;box-sizing:border-box;padding:0 24px;text-align:center;border:1px solid #fff;border-radius:12px;background-color:#fff;outline:none;}
 [class^="btnTiny"] em {display:inline-block;padding:11px 0;line-height:16px;font-size:13px;color:#404040;vertical-align:top;}
 [class^="btnTiny"]:active {background-color:#e6e6e6;}
@@ -35,6 +37,12 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 .btnTiny03 {border:1px solid #6856f2;background-color:#6856f2;}
 .btnTiny03 em {color:#fff;}
 .btnTiny03:active {background-color:#5343cd;}
+
+/* button - switch */
+[class^="btnSwitch"] {display:inline-block;position:relative;width:56px;height:32px;vertical-align:middle;border-radius:16px;background-color:#e0e3e9;transition:background-color .4s ease;}
+[class^="btnSwitch"]:before {display:block;content:"";position:absolute;left:3px;top:3px;width:26px;height:26px;border-radius:100%;background-color:#fff;transition:left .4s ease}
+[class^="btnSwitch"].checked {background-color:#6856f2;transition:background-color .4s ease;}
+[class^="btnSwitch"].checked:before {left:27px;}
 
 /* form - input text */
 [class^="inpTxt"] {display:inline-block;box-sizing:border-box;position:relative;border:1px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
@@ -73,10 +81,6 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpSrch"].disabled .inpTit {color:#b7b7b7;cursor:default;pointer-events:none;}
 [class^="inpSrch"].disabled .inp input[type="text"]:disabled {color:#9f9f9f;}
 
-/* form - input selectbox */
-
-/* form - input identification card */
-
 /* form - checkbox */
 [class^="inpCheck"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}
 [class^="inpCheck"] input[type="checkbox"] {display:block;position:absolute;left:0;top:0;width:24px;height:24px;background-image:url('../images/ico_check.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;}
@@ -87,11 +91,25 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 .inpCheck02 input[type="checkbox"] {top:5px;width:14px;height:10px;background-image:url('../images/ico_check02.png');background-size:100% auto;}
 .inpCheck02 > label {padding:0;line-height:20px;font-size:14px;font-weight:400;color:#101010;}
 
+/* form - checkbox btn design */
+[class^="btnChkCase"] {overflow:hidden;}
+[class^="btnChkCase"] .flexInner {display:flex;margin:0 -8px 0 0;}
+[class^="btnChkCase"] .flexInner button {margin:0 8px 0 0;}
+
+[class^="btnChkCase"] .flexInner button {display:block;box-sizing:border-box;width:100%;text-align:center;border:1px solid #fff;border-radius:8px;background-color:#fff;outline:none;}
+[class^="btnChkCase"] .flexInner button em {display:inline-block;padding:14px 0;line-height:18px;font-size:14px;font-weight:400;color:#404040;vertical-align:top;}
+[class^="btnChkCase"] .flexInner button.active {border:1px solid #f3f1fe;background-color:#f3f1fe;}
+[class^="btnChkCase"] .flexInner button.active em {color:#6856f2;font-weight:700;}
+
 /* form - radio */
 [class^="inpRadio"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}
 [class^="inpRadio"] input[type="radio"] {display:block;position:absolute;left:0;top:0;width:24px;height:24px;background-image:url('../images/ico_radio.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;}
 [class^="inpRadio"] > label {display:block;margin:0 0 0 10px;padding:2px 0;line-height:20px;font-size:16px;font-weight:700;color:#101010;}
 [class^="inpRadio"] input[type="radio"]:checked {background-position:center bottom;}
+
+/* form - input selectbox */
+
+/* form - input identification card */
 
 /* form - input guide */
 [class^="inpMssg"] {display:block;margin:8px 0 0;font-size:12px;color:#707070;}

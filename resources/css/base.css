@@ -42,7 +42,7 @@ caption {overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; l
 noscript {position:absolute; z-index:10; background:#efefef;}
 noscript p {margin:0;}
 
-.blind {position:absolute; overflow:hidden; width:0; height:0; font-size:1px; line-height:0; color:transparent;}
+.blind {position:absolute; overflow:hidden; width:0; height:0; padding:0; margin:0; font-size:1px; line-height:0; color:transparent;}
 
 .mask {display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(17, 17, 17, 0.7); z-index:5;}
 
