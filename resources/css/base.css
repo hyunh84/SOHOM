@@ -7,7 +7,7 @@ ul, ol, li{list-style:none}
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; margin:0; padding:0;}
 
-body {font-size:14px; line-height:18px; font-weight:400; color:#333; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif"; -webkit-text-size-adjust: none;}
+body {font-size:14px; line-height:18px; font-weight:400; color:#101010; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif"; -webkit-text-size-adjust: none;}
 
 pre, textarea, select {font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";}
 
@@ -15,7 +15,7 @@ fieldset {display:block; margin:0; padding:0; border:0;}
 legend {position:absolute; visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
 form {margin:0; padding:0;}
 
-a, a:link, a:visited, a:active, a:hover {text-decoration:none; color:#333; outline:none;}
+a, a:link, a:visited, a:active, a:hover {text-decoration:none; color:#101010; outline:none;}
 
 input, button {padding:0; margin:0; border:0; font-size:14px; vertical-align:middle; background:none; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";-webkit-appearance:none; outline:none;}
 button, label {cursor:pointer;}

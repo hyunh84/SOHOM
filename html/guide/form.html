@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/css/contents.css">
+
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui_style.js"></script>
+
+	<style>
+		.guideWrap {padding:20px;}
+		.guideH1 {line-height:45px;font-size:35px;}
+		.guideH2 {line-height:35px;font-size:20px;text-align:center;}
+		.guide_group {margin:20px 0 0;}
+		.guide_group .guide_case {margin:10px 0 0;}
+
+	</style>
+</head>
+<body style="background-color:#f8f8f8;">
+	
+	<section class="guideWrap">
+
+		<h1 class="guideH1">FORM</h1>
+
+		<div class="guide_group">
+			<h2 class="guideH2">CHECKBOX</h2>
+
+			<div class="guide_case">
+				<div class="inpCheck">
+					<input type="checkbox" id="exChk01" />
+					<label for="exChk01" class="blind">checkbox01</label>
+				</div>
+				<div class="inpCheck">
+					<input type="checkbox" id="exChk02" checked />
+					<label for="exChk02" class="blind">checkbox02</label>
+				</div>
+				<br />
+				<div class="inpCheck">
+					<input type="checkbox" id="exChk03" />
+					<label for="exChk03">checkbox03</label>
+				</div>
+				<div class="inpCheck">
+					<input type="checkbox" id="exChk04" checked />
+					<label for="exChk04">checkbox04</label>
+				</div>
+				<br />
+				<div class="inpCheck02">
+					<input type="checkbox" id="exChk05" />
+					<label for="exChk05">checkbox05</label>
+				</div>
+				<div class="inpCheck02">
+					<input type="checkbox" id="exChk06" checked />
+					<label for="exChk06">checkbox06</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_group">
+			<h2 class="guideH2">RADIO</h2>
+
+			<div class="guide_case">
+				<div class="inpRadio">
+					<input type="radio" id="exRid01" name="exRidGroup01" />
+					<label for="exRid01" class="blind">radio01</label>
+				</div>
+				<div class="inpRadio">
+					<input type="radio" id="exRid02" name="exRidGroup01" checked />
+					<label for="exRid02" class="blind">radio02</label>
+				</div>
+				<br />
+				<div class="inpRadio">
+					<input type="radio" id="exRid03" name="exRidGroup02" />
+					<label for="exRid03">radio03</label>
+				</div>
+				<div class="inpRadio">
+					<input type="radio" id="exRid04" name="exRidGroup02" checked />
+					<label for="exRid04">radio04</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_group">
+			<h2 class="guideH2">INPUT - TEXT</h2>
+
+			<div class="guide_case">
+				<div class="inpTxt" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="false">이름</button>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" /></div>
+				</div>
+				<div class="inpMssg">여기에 가이드 문구가 들어갑니다</div>
+				<br />
+				<br />
+				<div class="inpTxt active" style="width:100%;">
+					<button class="inpTit" type="button" aria-expanded="true">이름</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="이름을 입력하세요." value="홍길동" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt active error" style="width:100%;">
+					<button class="inpTit" type="button" aria-expanded="true">이름</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="이름을 입력하세요." value="홍길동" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt disabled" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="false">이름</button>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt active disabled" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="true">이름</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="이름을 입력하세요." value="홍길동" disabled /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt active disabled" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="true">이름</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="이름을 입력하세요." value="홍길동" disabled /></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_group">
+			<h2 class="guideH2">INPUT - SEARCH</h2>
+
+			<div class="guide_case">
+				<div class="inpSrch" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="false">검색</button>
+					<div class="inp" aria-hidden="true"><input type="text" title="검색어를 입력하세요" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpSrch active" style="width:100%;">
+					<button class="inpTit" type="button" aria-expanded="true">검색</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="검색어를 입력하세요." value="홍길동" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpSrch active error" style="width:100%;">
+					<button class="inpTit" type="button" aria-expanded="true">검색</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="검색어를 입력하세요." value="홍길동" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpSrch disabled" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="false">검색</button>
+					<div class="inp" aria-hidden="true"><input type="text" title="검색어를 입력하세요." /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpSrch active disabled" style="width:100%;">
+					<button type="button" class="inpTit" aria-expanded="true">검색</button>
+					<div class="inp" aria-hidden="false"><input type="text" title="검색어를 입력하세요." value="홍길동" disabled /></div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+</body>
+</html>
