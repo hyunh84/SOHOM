@@ -8,35 +8,44 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 /* button - large */
 [class^="btnLarge"] {display:block;box-sizing:border-box;width:100%;text-align:center;border:1px solid #fff;border-radius:12px;background-color:#fff;outline:none;}
 [class^="btnLarge"] em {display:inline-block;padding:17px 0;line-height:20px;font-size:16px;font-weight:700;color:#404040;vertical-align:top;}
-[class^="btnLarge"]:active {background-color:#e6e6e6;}
+[class^="btnLarge"]:active,
+[class^="btnLarge"]:hover {background-color:#e6e6e6;}
 .btnLarge02 {border:1px solid #f3f1fe;background-color:#f3f1fe;}
 .btnLarge02 em {color:#6856f2;}
-.btnLarge02:active {background-color:#dfd9fe;}
+.btnLarge02:active,
+.btnLarge02:hover {background-color:#dfd9fe;}
 .btnLarge03 {border:1px solid #6856f2;background-color:#6856f2;}
 .btnLarge03 em {color:#fff;}
-.btnLarge03:active {background-color:#5343cd;}
+.btnLarge03:active,
+.btnLarge03:hover {background-color:#5343cd;}
 
 /* button - mideum */
 [class^="btnMideum"] {display:block;box-sizing:border-box;width:100%;text-align:center;border:1px solid #fff;border-radius:12px;background-color:#fff;outline:none;}
 [class^="btnMideum"] em {display:inline-block;padding:14px 0;line-height:18px;font-size:14px;font-weight:700;color:#404040;vertical-align:top;}
-[class^="btnMideum"]:active {background-color:#e6e6e6;}
+[class^="btnMideum"]:active,
+[class^="btnMideum"]:hover {background-color:#e6e6e6;}
 .btnMideum02 {border:1px solid #f3f1fe;background-color:#f3f1fe;}
 .btnMideum02 em {color:#6856f2;}
-.btnMideum02:active {background-color:#dfd9fe;}
+.btnMideum02:active,
+.btnMideum02:hover {background-color:#dfd9fe;}
 .btnMideum03 {border:1px solid #6856f2;background-color:#6856f2;}
 .btnMideum03 em {color:#fff;}
-.btnMideum03:active {background-color:#5343cd;}
+.btnMideum03:active,
+.btnMideum03:hover {background-color:#5343cd;}
 
 /* button - tiny */
 [class^="btnTiny"] {display:inline-block;box-sizing:border-box;padding:0 24px;text-align:center;border:1px solid #fff;border-radius:12px;background-color:#fff;outline:none;}
 [class^="btnTiny"] em {display:inline-block;padding:11px 0;line-height:16px;font-size:13px;color:#404040;vertical-align:top;}
-[class^="btnTiny"]:active {background-color:#e6e6e6;}
+[class^="btnTiny"]:active,
+[class^="btnTiny"]:hover {background-color:#e6e6e6;}
 .btnTiny02 {border:1px solid #f3f1fe;background-color:#f3f1fe;}
 .btnTiny02 em {color:#6856f2;}
-.btnTiny02:active {background-color:#dfd9fe;}
+.btnTiny02:active,
+.btnTiny02:hover  {background-color:#dfd9fe;}
 .btnTiny03 {border:1px solid #6856f2;background-color:#6856f2;}
 .btnTiny03 em {color:#fff;}
-.btnTiny03:active {background-color:#5343cd;}
+.btnTiny03:active,
+.btnTiny03:hover {background-color:#5343cd;}
 
 /* button - switch */
 [class^="btnSwitch"] {display:inline-block;position:relative;width:56px;height:32px;vertical-align:middle;border-radius:16px;background-color:#e0e3e9;transition:background-color .4s ease;}
