@@ -17,7 +17,7 @@ form {margin:0; padding:0;}
 
 a, a:link, a:visited, a:active, a:hover {text-decoration:none; color:#101010; outline:none;}
 
-input:disabled {opacity:1;-webkit-text-fill-color: inherit;}
+input:disabled {opacity:1;}
 input, button {padding:0; margin:0; border:0; font-size:14px; vertical-align:middle; background:none; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";appearance:none;-webkit-appearance:none; outline:none;}
 button, label {cursor:pointer;}
 
