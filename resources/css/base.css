@@ -24,7 +24,7 @@ select::-ms-expand {display:none;}
 select {appearance:none;-webkit-appearance:none;border:none;background-repeat:no-repeat;background-position:center right;}
 
 input[type="text"],
-input[type="password"] {height:26px;padding:0 10px;border:1px solid #00a0e9;background:#fff;}
+input[type="password"] {height:26px;padding:0 10px;}
 
 input[type="radio"], input[type="checkbox"] {appearance:none;-webkit-appearance:none;}
 
