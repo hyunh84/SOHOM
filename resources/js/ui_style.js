@@ -56,3 +56,63 @@ $(document).on('click', '[class^="btnChkCase"] button', function() {
 
 	
 });
+
+/*********************************************************************************************************
+	layer pop
+*********************************************************************************************************/
+var layerOpenFn = function(target, clickTarget) {
+	var _clickTarget = clickTarget;
+	var _layerWrap = $(target);
+	var _layerBox = $('.layerBox', _layerWrap).attr('tabindex', 0);
+	var _btnCloseLayer = $('.btnCloseLayer', _layerBox);
+	var _accessible01;
+	var _accessible02;
+
+	_layerWrap.data('click-target', clickTarget);
+	_layerWrap.attr('aria-hidden', false);
+	_layerWrap.prepend('<div class="AccessibilityHtml1" tabindex="0" aria-hidden="true"></div>');
+	_layerWrap.prepend('<div class="layerMask" aria-hidden="true"></div>');
+	_layerWrap.append('<div class="AccessibilityHtml2" tabindex="0" aria-hidden="true"></div>');
+	_accessible01 = $('.AccessibilityHtml1', _layerWrap);
+	_accessible02 = $('.AccessibilityHtml2', _layerWrap);
+
+	$('body').addClass('isPop');
+	_layerWrap.show();
+	if(_layerWrap.hasClass('floatB')) _layerBox.slideDown();
+	_layerBox.focus();
+
+	_btnCloseLayer.off('click').on('click', function() {
+		layerCloseFn(target);
+	});
+	_accessible01.off('focusin').on('focusin', function() {
+		console.log(_btnCloseLayer.is(':hidden') || !_btnCloseLayer.length);
+		if(_btnCloseLayer.is(':hidden') || !_btnCloseLayer.length) {
+			_layerBox.focus();
+		}else{
+			_btnCloseLayer.focus();
+		}
+	});
+	_accessible02.off('focusin').on('focusin', function() {
+		_layerBox.focus();
+	});
+}
+
+var layerCloseFn = function(target) {
+	var _layerWrap = $(target);
+	var _layerBox = $('.layerBox', _layerWrap);
+	var _clickTarget = _layerWrap.data('click-target');
+	var _accessible01 = $('.AccessibilityHtml1', _layerWrap);
+	var _accessible02 = $('.AccessibilityHtml2', _layerWrap);
+	var _layerMask = $('.layerMask', _layerWrap);
+
+	$('body').removeClass('isPop');
+	_accessible01.remove();
+	_accessible02.remove();
+	_layerMask.remove();
+	_layerWrap.attr('aria-hidden', true);
+	_layerWrap.hide();
+	if(_layerWrap.hasClass('floatB')) _layerBox.hide();
+	_layerBox.removeAttr('tabindex');
+	$(_clickTarget).focus();
+
+}

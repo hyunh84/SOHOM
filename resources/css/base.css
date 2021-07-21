@@ -7,7 +7,8 @@ ul, ol, li{list-style:none}
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; margin:0; padding:0;}
 
-body {font-size:14px; line-height:18px; font-weight:400; color:#101010; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif"; -webkit-text-size-adjust: none;}
+body {font-size:14px; line-height:18px; font-weight:400; color:#404040; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif"; -webkit-text-size-adjust: none;word-break:keep-all;}
+body.isPop {overflow:hidden;}
 
 pre, textarea, select {font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";}
 
@@ -15,10 +16,10 @@ fieldset {display:block; margin:0; padding:0; border:0;}
 legend {position:absolute; visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
 form {margin:0; padding:0;}
 
-a, a:link, a:visited, a:active, a:hover {text-decoration:none; color:#101010; outline:none;}
+a, a:link, a:visited, a:active, a:hover {text-decoration:none; color:#404040; outline:none;}
 
 input:disabled {opacity:1;}
-input, button {padding:0; margin:0; border:0; font-size:14px; vertical-align:middle; background:none; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";appearance:none;-webkit-appearance:none; outline:none;}
+input, button {padding:0; margin:0; border:0; font-size:14px; vertical-align:middle; background:none; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";appearance:none;-webkit-appearance:none;}
 button, label {cursor:pointer;}
 
 select::-ms-expand {display:none;} 
@@ -41,9 +42,7 @@ caption {overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; l
 noscript {position:absolute; z-index:10; background:#efefef;}
 noscript p {margin:0;}
 
-.blind {position:absolute; overflow:hidden; width:0; height:0; padding:0; margin:0; font-size:1px; line-height:0; color:transparent;}
-
-.mask {display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(17, 17, 17, 0.7); z-index:5;}
+.blind {display:block !important; overflow:hidden !important; width:0 !important; height:0 !important; padding:0 !important; margin:0 !important; font-size:1px !important; line-height:0 !important; color:transparent !important;}
 
 /* skip */
 .skip {position:fixed;}

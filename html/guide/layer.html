@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>GUIDE | lyaer</title>
+	<title>GUIDE | LAYER</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../resources/css/base.css">
 	<link rel="stylesheet" type="text/css" href="../../resources/css/fonts.css">
@@ -22,9 +22,9 @@
 
 	</style>
 </head>
-<body style="background-color:#f8f8f8;">
+<body>
 
-<div class="wrap">
+<div class="wrap" style="height:10000px;">
 	<section class="guideWrap">
 
 		<h1 class="guideH1">FORM</h1>
@@ -33,7 +33,10 @@
 			<h2 class="guideH2">CHECKBOX</h2>
 
 			<div class="guide_case">
-				<button type="button" class="btnTiny03"><em>float popup01</em></button>
+				<button type="button" class="btnTiny03" onclick="layerOpenFn('#layerSample01', this);"><em>alert</em></button>
+				<br />
+				<br />
+				<button type="button" class="btnTiny03" onclick="layerOpenFn('#layerSample02', this);"><em>select</em></button>
 			</div>
 
 		</div>
@@ -42,25 +45,56 @@
 	</section>
 
 
-	<!-- layer - default -->
-	<article class="layerWrap">
-		<div class="layerContainer">
-			<div class="layerContents">
-
+	<!-- layer - alert -->
+	<article class="layerWrap" id="layerSample01" aria-hidden="true">
+		<div class="layerBox">
+			<header class="header" aria-hidden="true">
+				<h1>알림</h1>
+			</header>
+			<div class="layerBody">
+				<div class="layerContents">
+					<div class="alertMssgWrap">
+						<strong class="mssgTit">
+							사업장 등록이 완료되었어요.<br />
+							다른 사업장도 추가하시겠어요?
+						</strong>
+						<p class="mssgTxt">
+							‘전체 &gt; 사업장관리’ 또는<br />‘ my sohome &gt; 사업장전환’ 메뉴에서도 추가<br />등록 하실 수 있어요
+						</p>
+					</div>
+	
+					<div class="btnBundleBox">
+						<div class="flexBundle">
+							<div class="flexItem"><button type="button" class="btnMideum" onclick="layerCloseFn('#layerSample01');"><em>취소</em></button></div>
+							<div class="flexItem"><button type="button" class="btnMideum03"><em>추가하기</em></button></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</article>
-
+	
 	<!-- layer - float bottom -->
-	<article class="layerWrap floatB">
-		<header>
-			<h1>휴대폰 본인인증 약관 동의</h1>
-		</header>
-
-		<div class="layerContainer">
-			<div class="layerContents">
-
+	<article class="layerWrap floatB" id="layerSample02" aria-hidden="true">
+		<div class="layerBox">
+			<header class="header">
+				<h1 class="layerTitle">통신사 선택</h1>
+			</header>
+			<div class="layerBody">
+				<div class="layerContents">
+					<div class="layerOptionBox">
+						<ul>
+							<li><button type="button"><em>SKT</em></button></li>
+							<li><button type="button"><em>KT</em></button></li>
+							<li><button type="button"><em>LG U+</em></button></li>
+							<li><button type="button"><em>SKT 알뜰폰</em></button></li>
+							<li><button type="button"><em>KT 알뜰폰</em></button></li>
+							<li><button type="button"><em>LG U+ 알뜰폰</em></button></li>
+						</ul>
+					</div>
+				</div>
 			</div>
+			<button type="button" class="btnCloseLayer"><em class="blind">닫기</em></button>
 		</div>
 	</article>
 
