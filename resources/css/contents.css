@@ -73,12 +73,12 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="btnBundleBox"] [class^="flexBundle"] .flexItem {width:100%;margin:0 15px 0 0;}
 
 /* form - input text */
-[class^="inpTxt"] {display:inline-block;box-sizing:border-box;position:relative;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
+[class^="inpTxt"] {display:inline-block;box-sizing:border-box;position:relative;width:100%;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
 [class^="inpTxt"] .inpTit {display:block;box-sizing:border-box;width:100%;padding:22px 15px;line-height:24px;font-size:18px;color:#9f9f9f;text-align:left;}
 [class^="inpTxt"] .inp {display:none;}
 [class^="inpTxt"] .inp input[type="text"],
 [class^="inpTxt"] .inp input[type="tel"],
-[class^="inpTxt"] .inp input[type="password"] {box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;}
+[class^="inpTxt"] .inp input[type="password"] {box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;}
 [class^="inpTxt"] .inp input[type="text"]::placeholder,
 [class^="inpTxt"] .inp input[type="tel"]::placeholder,
 [class^="inpTxt"] .inp input[type="password"]::placeholder {color:#101010;}
@@ -95,11 +95,11 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpTxt"].active.disabled .inp span {display:block;box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#9f9f9f;border:none;background-color:transparent;}
 
 /* form - input search */
-[class^="inpSrch"] {display:inline-block;box-sizing:border-box;position:relative;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
-[class^="inpSrch"]:before {display:block;content:"";position:absolute;left:17px;top:50%;width:18px;height:18px;margin:-9px 0 0;background:url('../images/ico_search.png') no-repeat center;background-size:100% auto;}
+[class^="inpSrch"] {display:inline-block;box-sizing:border-box;position:relative;width:100%;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
 [class^="inpSrch"] .inpTit {display:block;box-sizing:border-box;width:100%;padding:22px 15px 22px 45px;line-height:24px;font-size:18px;color:#9f9f9f;text-align:left;}
+[class^="inpSrch"] .inpTit:before {display:block;content:"";position:absolute;left:17px;top:50%;width:18px;height:18px;margin:-9px 0 0;background:url('../images/ico_search.png') no-repeat center;background-size:100% auto;}
 [class^="inpSrch"] .inp {display:none;}
-[class^="inpSrch"] .inp input[type="text"] {box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;}
+[class^="inpSrch"] .inp input[type="text"] {box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;}
 [class^="inpSrch"] .inp input[type="text"]::placeholder {color:#101010;}
 [class^="inpSrch"].active {padding:10px 0 10px 30px;border:2px solid #6856f2;background-color:#f2f3f5}
 [class^="inpSrch"].active .inpTit  {padding:0 15px;font-size:12px;cursor:default;pointer-events:none;}
@@ -110,6 +110,20 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpSrch"].disabled .inpTit {color:#b7b7b7;cursor:default;pointer-events:none;}
 [class^="inpSrch"].active.disabled .inp input[type="text"]:disabled {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
 [class^="inpSrch"].disabled .inp span {display:block;box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#9f9f9f;border:none;background-color:transparent;}
+
+/* form - input selectbox */
+[class^="inpSelect"] {display:inline-block;box-sizing:border-box;position:relative;width:100%;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
+[class^="inpSelect"] .inpTit {display:block;box-sizing:border-box;width:100%;padding:22px 15px;line-height:24px;font-size:18px;color:#9f9f9f;text-align:left;}
+[class^="inpSelect"] .selectbox {display:none;}
+[class^="inpSelect"] .selectbox select {box-sizing:border-box;width:100%;height:24px;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;}
+[class^="inpSelect"].active {padding:10px 0;border:2px solid #6856f2;background-color:#f2f3f5}
+[class^="inpSelect"].active .inpTit  {padding:0 15px;font-size:12px;cursor:default;pointer-events:none;}
+[class^="inpSelect"].active .selectbox {display:block;}
+[class^="inpSelect"].active.error {border:2px solid #ed2e7e;background-color:#feeef5}
+[class^="inpSelect"].active.error .inpTit  {padding:0 15px;font-size:12px;cursor:default;}
+[class^="inpSelect"].disabled {border:2px solid #dbdee3;background-color:#dbdee3;}
+[class^="inpSelect"].disabled .inpTit {color:#b7b7b7;cursor:default;pointer-events:none;}
+[class^="inpSelect"].active.disabled .selectbox select:disabled {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
 
 /* form - checkbox */
 [class^="inpCheck"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}
@@ -136,8 +150,6 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpRadio"] input[type="radio"] {display:block;position:absolute;left:0;top:0;width:24px;height:24px;background-image:url('../images/ico_radio.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;}
 [class^="inpRadio"] > label {display:block;margin:0 0 0 10px;padding:2px 0;line-height:20px;font-size:16px;font-weight:700;color:#101010;}
 [class^="inpRadio"] input[type="radio"]:checked {background-position:center bottom;}
-
-/* form - input selectbox */
 
 /* form - input identification card */
 

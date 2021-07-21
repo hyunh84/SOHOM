@@ -1,10 +1,9 @@
-// Input Text active
+// Input Text, Search active
 $(document).on('click', '.inpTxt .inpTit, .inpSrch .inpTit ', function() {
 	var _this = $(this);
 	var _inpBox = _this.parent();
 	var _inp = $('.inp', _inpBox);
 	var _inpUnit = $('input[type="text"], input[type="tel"], input[type="password"]', _inp);
-	
 
 	if(_inp.is(':hidden')) {
 		_this.attr('aria-expanded', 'true');
@@ -22,14 +21,68 @@ $(document).on('focusout', '.inpTxt input[type="text"], .inpTxt input[type="tel"
 	var _inpTit = $('.inpTit', _inpBox);
 	var _inp = _this.parent();
 
-	
-
 	if(_val == '') {
 		_inpTit.attr('aria-expanded', 'false');
 		_inp.attr('aria-hidden', 'true');
 		_inpBox.removeClass('active');
 	}
 });
+
+//Selectbox form active
+var createSelectHtml = function(target) {
+	var _selectWrap = target;
+	var _select = $('select', _selectWrap);
+	var _selectTitle = _select.data('select-title');
+	var _opt = $('option', _select);
+	var _html = '';
+
+	_html += '<article class="layerWrap floatB" id="selectBundleBox" aria-hidden="true"><div class="layerBox"><header class="header">';
+	_html += '<h1 class="layerTitle">' + _selectTitle + '</h1>';
+	_html += '</header><div class="layerBody"><div class="layerContents"><div class="layerOptionBox"><ul>';
+
+	for(var i=0; i < _opt.length; i++) {
+		_html += '<li><button type="button"><em>' + _opt.eq(i).text() + '</em></button></li>';
+	}
+
+	_html += '</ul></div></div></div><button type="button" class="btnCloseLayer"><em class="blind">닫기</em></button></div></article>';
+
+	return _html;
+}
+$(document).on('click', '.inpSelect .inpTit, .inpSelect select', function() {
+	var _this = $(this);
+	var _selectWrap = _this.closest('.inpSelect');
+	var _selectBox = $('.selectbox', _selectWrap);
+	var _select = $('select', _selectBox);
+	var _opt = $('option', _select);
+	var _html = createSelectHtml(_selectWrap);
+
+	$('.wrap').append(_html);
+	layerOpenFn('#selectBundleBox', _this, function() {
+		$('#selectBundleBox').remove();
+	});
+
+	_select.off('click').on('click', function(e) {e.preventDefault()});
+
+	$('#selectBundleBox .layerOptionBox button').click(function() {
+		var _optItem = $(this);
+		var _optItemIdx = _optItem.closest('li').index();
+		_opt.prop('selected', false);
+		_opt.eq(_optItemIdx).prop('selected', true);
+
+		if(_selectBox.is(':hidden')) {
+			_this.attr('aria-expanded', 'true');
+			_selectBox.attr('aria-hidden', 'false');
+			_selectWrap.addClass('active');
+			_select.focus();
+		}
+
+		layerCloseFn('#selectBundleBox', function() {
+			_select.focus();
+			$('#selectBundleBox').remove();
+		});
+	});
+});
+
 
 // Button Switch 
 $(document).on('click', '[class^="btnSwitch"]', function() {
@@ -60,7 +113,7 @@ $(document).on('click', '[class^="btnChkCase"] button', function() {
 /*********************************************************************************************************
 	layer pop
 *********************************************************************************************************/
-var layerOpenFn = function(target, clickTarget) {
+var layerOpenFn = function(target, clickTarget, closeCallback) {
 	var _clickTarget = clickTarget;
 	var _layerWrap = $(target);
 	var _layerBox = $('.layerBox', _layerWrap).attr('tabindex', 0);
@@ -82,7 +135,7 @@ var layerOpenFn = function(target, clickTarget) {
 	_layerBox.focus();
 
 	_btnCloseLayer.off('click').on('click', function() {
-		layerCloseFn(target);
+		layerCloseFn(target, closeCallback);
 	});
 	_accessible01.off('focusin').on('focusin', function() {
 		console.log(_btnCloseLayer.is(':hidden') || !_btnCloseLayer.length);
@@ -97,7 +150,7 @@ var layerOpenFn = function(target, clickTarget) {
 	});
 }
 
-var layerCloseFn = function(target) {
+var layerCloseFn = function(target, callback) {
 	var _layerWrap = $(target);
 	var _layerBox = $('.layerBox', _layerWrap);
 	var _clickTarget = _layerWrap.data('click-target');
@@ -114,5 +167,5 @@ var layerCloseFn = function(target) {
 	if(_layerWrap.hasClass('floatB')) _layerBox.hide();
 	_layerBox.removeAttr('tabindex');
 	$(_clickTarget).focus();
-
+	if(callback) callback();
 }
