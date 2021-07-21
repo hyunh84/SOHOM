@@ -61,7 +61,7 @@ $(document).on('click', '.inpSelect .inpTit, .inpSelect select', function() {
 		$('#selectBundleBox').remove();
 	});
 
-	_select.off('click').on('click', function(e) {e.preventDefault()});
+	_select.off('click focusin').on('click focusin', function(e) {e.preventDefault()});
 
 	$('#selectBundleBox .layerOptionBox button').click(function() {
 		var _optItem = $(this);
