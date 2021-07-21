@@ -17,6 +17,7 @@ form {margin:0; padding:0;}
 
 a, a:link, a:visited, a:active, a:hover {text-decoration:none; color:#101010; outline:none;}
 
+input:disabled {opacity:1;-webkit-text-fill-color: inherit;}
 input, button {padding:0; margin:0; border:0; font-size:14px; vertical-align:middle; background:none; font-family:"Spoqa Han Sans Neo","AppleGothicNeoSD","Malgun Gothic","맑은 고딕","Helvetica","sans-serif";appearance:none;-webkit-appearance:none; outline:none;}
 button, label {cursor:pointer;}
 
@@ -25,8 +26,6 @@ select {appearance:none;-webkit-appearance:none;border:none;background-repeat:no
 
 input[type="text"],
 input[type="password"] {height:26px;padding:0 10px;}
-
-input[type="radio"], input[type="checkbox"] {appearance:none;-webkit-appearance:none;}
 
 img {border:0; vertical-align:middle;}
 
