@@ -49,9 +49,7 @@ $(document).on('click', '[class^="inpSelect"] .btnSelect', function() {
 	var _html = createSelectHtml(_selectWrap);
 
 	$('.wrap').append(_html);
-	// layerOpenFn('#selectBundleBox', _this, function() {
-	// 	$('#selectBundleBox').remove();
-	// });
+
 	layerOpenFn('#selectBundleBox', _this);
 
 	$('#selectBundleBox .btnCloseLayer').click(function() {
@@ -61,6 +59,7 @@ $(document).on('click', '[class^="inpSelect"] .btnSelect', function() {
 	$('#selectBundleBox .layerOptionBox button').click(function() {
 		var _optItem = $(this);
 
+		$('body').removeClass('isPop');
 		_view.text(_optItem.text());
 		_selectWrap.addClass('active');
 		_this.focus();
