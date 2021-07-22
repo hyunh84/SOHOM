@@ -177,13 +177,14 @@
 				<div class="inpSelect">
 					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
 					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요.">
-							<option>options01</option>
+						<span class="view" aria-hidden="true"></span>
+						<ul data-select-title="옵션을 선택하세요." readonly>
+							<span>options01</option>
 							<option>options02</option>
 							<option>options03</option>
 							<option>options04</option>
 							<option>options05</option>
-						</select>
+							</ul>
 					</div>
 				</div>
 				<br />
@@ -191,7 +192,7 @@
 				<div class="inpSelect active">
 					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
 					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요.">
+						<select data-select-title="옵션을 선택하세요." readonly>
 							<option>options01</option>
 							<option selected>options02</option>
 							<option>options03</option>
@@ -205,7 +206,7 @@
 				<div class="inpSelect active error">
 					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
 					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요.">
+						<select data-select-title="옵션을 선택하세요." readonly>
 							<option>options01</option>
 							<option>options02</option>
 							<option selected>options03</option>
@@ -234,7 +235,7 @@
 				<div class="inpSelect active disabled">
 					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
 					<div class="selectbox" aria-hidden="true">
-						<select disabled>
+						<select data-select-title="옵션을 선택하세요." disabled>
 							<option>선택하세요</option>
 							<option>options01</option>
 							<option>options02</option>
