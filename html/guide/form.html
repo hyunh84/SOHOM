@@ -90,7 +90,7 @@
 		<div class="guide_group">
 			<h2 class="guideH2">INPUT - TEXT</h2>
 
-			<div class="guide_case">
+			<!-- <div class="guide_case">
 				<div class="inpTxt">
 					<button type="button" class="inpTit" aria-expanded="false">이름</button>
 					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" /></div>
@@ -100,7 +100,7 @@
 				<br />
 				<div class="inpTxt active">
 					<button class="inpTit" type="button" aria-expanded="true">이름</button>
-					<div class="inp" aria-hidden="false"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" value="홍길동" /></div>
+					<div class="inp"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" value="홍길동" /></div>
 				</div>
 				<br />
 				<br />
@@ -126,6 +126,37 @@
 					<button type="button" class="inpTit" aria-expanded="true">이름</button>
 					<div class="inp" aria-hidden="false"><span>홍길동 span TAG</span></div>
 				</div>
+			</div> -->
+			<div class="guide_case">
+				<div class="inpTxt">
+					<span class="inpTit">이름</span>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." /></div>
+				</div>
+				<div class="inpMssg">여기에 가이드 문구가 들어갑니다</div>
+				<br />
+				<br />
+				<div class="inpTxt active">
+					<span class="inpTit">이름</span>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." value="홍길동" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt active error">
+					<span class="inpTit">이름</span>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." value="홍길동" /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt disabled">
+					<span class="inpTit">이름</span>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." disabled /></div>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxt active disabled">
+					<span class="inpTit">이름</span>
+					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." value="홍길동" disabled /></div>
+				</div>
 			</div>
 		</div>
 
@@ -133,39 +164,73 @@
 			<h2 class="guideH2">INPUT - SEARCH</h2>
 
 			<div class="guide_case">
-				<div class="inpSrch">
-					<button type="button" class="inpTit" aria-expanded="false">검색</button>
-					<div class="inp" aria-hidden="true"><input type="text" title="검색어를 입력하세요" placeholder="검색어를 입력하세요." /></div>
+				<div class="inpTxtSrch">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요" /></div>
 				</div>
 				<br />
 				<br />
-				<div class="inpSrch active">
-					<button class="inpTit" type="button" aria-expanded="true">검색</button>
-					<div class="inp" aria-hidden="false"><input type="text" title="검색어를 입력하세요." placeholder="검색어를 입력하세요." value="홍길동" /></div>
+				<div class="inpTxtSrch active">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요." value="홍길동" /></div>
 				</div>
 				<br />
 				<br />
-				<div class="inpSrch active error">
-					<button class="inpTit" type="button" aria-expanded="true">검색</button>
-					<div class="inp" aria-hidden="false"><input type="text" title="검색어를 입력하세요." placeholder="검색어를 입력하세요." value="홍길동" /></div>
+				<div class="inpTxtSrch active error">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요." value="홍길동" /></div>
 				</div>
 				<br />
 				<br />
-				<div class="inpSrch disabled">
-					<button type="button" class="inpTit" aria-expanded="false">검색</button>
-					<div class="inp" aria-hidden="true"><input type="text" title="검색어를 입력하세요." placeholder="검색어를 입력하세요." /></div>
+				<div class="inpTxtSrch disabled">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요." disabled /></div>
 				</div>
 				<br />
 				<br />
-				<div class="inpSrch active disabled">
-					<button type="button" class="inpTit" aria-expanded="false">검색</button>
-					<div class="inp" aria-hidden="true"><input type="text" title="검색어를 입력하세요" placeholder="검색어를 입력하세요." value="홍길동" disabled="disabled" /></div>
+				<div class="inpTxtSrch active disabled">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요" value="홍길동" disabled /></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_group">
+			<h2 class="guideH2">INPUT - INQUIRY</h2>
+
+			<div class="guide_case">
+				<div class="inpTxtInquiry">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요" /></div>
+					<button type="button" class="btnInquiry">확인</button>
 				</div>
 				<br />
 				<br />
-				<div class="inpSrch active disabled">
-					<button type="button" class="inpTit" aria-expanded="true">검색</button>
-					<div class="inp" aria-hidden="false"><span>홍길동 span TAG</span></div>
+				<div class="inpTxtInquiry active">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요." value="홍길동" /></div>
+					<button type="button" class="btnInquiry">확인</button>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxtInquiry active error">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요." value="홍길동" /></div>
+					<button type="button" class="btnInquiry">확인</button>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxtInquiry disabled">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요." disabled /></div>
+					<button type="button" class="btnInquiry" disabled>확인</button>
+				</div>
+				<br />
+				<br />
+				<div class="inpTxtInquiry active disabled">
+					<span class="inpTit">이름</span>
+					<div class="inp"><input type="text" title="검색어를 입력하세요" value="홍길동" disabled /></div>
+					<button type="button" class="btnInquiry" disabled>확인</button>
 				</div>
 			</div>
 		</div>
@@ -175,78 +240,91 @@
 
 			<div class="guide_case">
 				<div class="inpSelect">
-					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
-					<div class="selectbox" aria-hidden="true">
-						<span class="view" aria-hidden="true"></span>
-						<ul data-select-title="옵션을 선택하세요." readonly>
-							<span>options01</option>
-							<option>options02</option>
-							<option>options03</option>
-							<option>options04</option>
-							<option>options05</option>
-							</ul>
+					<button type="button" class="btnSelect"><em class="blind">직업을 선택하세요.</em></button><!-- blind 안에 셀렉트 옵션 팝업 제목을 넣어주세요! -->
+					<span class="inpTit">직업</span>
+					<div class="inp">
+						<span class="inpView"></span>
+						<ul class="selectOpt" aria-hidden="true">
+							<li>직업 options01</li>
+							<li>직업 options02</li>
+							<li>직업 options03</li>
+							<li>직업 options04</li>
+							<li>직업 options05</li>
+							<li>직업 options06</li>
+						</ul>
 					</div>
 				</div>
 				<br />
 				<br />
 				<div class="inpSelect active">
-					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
-					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요." readonly>
-							<option>options01</option>
-							<option selected>options02</option>
-							<option>options03</option>
-							<option>options04</option>
-							<option>options05</option>
-						</select>
+					<button type="button" class="btnSelect"><em class="blind">직업을 선택하세요.</em></button>
+					<span class="inpTit">직업</span>
+					<div class="inp">
+						<span class="inpView">직업 options02</span>
+						<ul class="selectOpt" aria-hidden="true">
+							<li>직업 options01</li>
+							<li>직업 options02</li>
+							<li>직업 options03</li>
+							<li>직업 options04</li>
+							<li>직업 options05</li>
+							<li>직업 options06</li>
+						</ul>
 					</div>
 				</div>
 				<br />
 				<br />
 				<div class="inpSelect active error">
-					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
-					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요." readonly>
-							<option>options01</option>
-							<option>options02</option>
-							<option selected>options03</option>
-							<option>options04</option>
-							<option>options05</option>
-						</select>
+					<button type="button" class="btnSelect"><em class="blind">직업을 선택하세요.</em></button>
+					<span class="inpTit">직업</span>
+					<div class="inp">
+						<span class="inpView">직업 options02</span>
+						<ul class="selectOpt" aria-hidden="true">
+							<li>직업 options01</li>
+							<li>직업 options02</li>
+							<li>직업 options03</li>
+							<li>직업 options04</li>
+							<li>직업 options05</li>
+							<li>직업 options06</li>
+						</ul>
 					</div>
 				</div>
 				<br />
 				<br />
 				<div class="inpSelect disabled">
-					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
-					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요." disabled>
-							<option>선택하세요</option>
-							<option>options01</option>
-							<option>options02</option>
-							<option>options03</option>
-							<option>options04</option>
-							<option>options05</option>
-						</select>
+					<button type="button" class="btnSelect" disabled><em class="blind">직업을 선택하세요.</em></button>
+					<span class="inpTit">직업</span>
+					<div class="inp">
+						<span class="inpView"></span>
+						<ul class="selectOpt" aria-hidden="true">
+							<li>직업 options01</li>
+							<li>직업 options02</li>
+							<li>직업 options03</li>
+							<li>직업 options04</li>
+							<li>직업 options05</li>
+							<li>직업 options06</li>
+						</ul>
 					</div>
 				</div>
 				<br />
 				<br />
 				<div class="inpSelect active disabled">
-					<button type="button" class="inpTit" aria-expanded="false">SELECT</button>
-					<div class="selectbox" aria-hidden="true">
-						<select data-select-title="옵션을 선택하세요." disabled>
-							<option>선택하세요</option>
-							<option>options01</option>
-							<option>options02</option>
-							<option>options03</option>
-							<option>options04</option>
-							<option>options05</option>
-						</select>
+					<button type="button" class="btnSelect" disabled><em class="blind">직업을 선택하세요.</em></button>
+					<span class="inpTit">직업</span>
+					<div class="inp">
+						<span class="inpView">직업 options02</span>
+						<ul class="selectOpt" aria-hidden="true">
+							<li>직업 options01</li>
+							<li>직업 options02</li>
+							<li>직업 options03</li>
+							<li>직업 options04</li>
+							<li>직업 options05</li>
+							<li>직업 options06</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 
 	</section>
