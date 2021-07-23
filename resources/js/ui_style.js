@@ -1,5 +1,5 @@
 // Input Text, Search active
-$(document).on('focusin change', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"]', function() {
+$(document).on('click focusin change', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"]', function() {
 	var _this = $(this);
 	var _val = _this.val();
 	var _inpBox = _this.closest('[class^="inpTxt"]');
