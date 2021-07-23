@@ -5,12 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>GUIDE | FORM</title>
 	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="../../resources/css/base.css">
 	<link rel="stylesheet" type="text/css" href="../../resources/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css">
 	<link rel="stylesheet" type="text/css" href="../../resources/css/contents.css">
 
 	<script type="text/javascript" src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="../../resources/js/ui_style.js"></script>
 
 	<style>
@@ -90,43 +93,6 @@
 		<div class="guide_group">
 			<h2 class="guideH2">INPUT - TEXT</h2>
 
-			<!-- <div class="guide_case">
-				<div class="inpTxt">
-					<button type="button" class="inpTit" aria-expanded="false">이름</button>
-					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" /></div>
-				</div>
-				<div class="inpMssg">여기에 가이드 문구가 들어갑니다</div>
-				<br />
-				<br />
-				<div class="inpTxt active">
-					<button class="inpTit" type="button" aria-expanded="true">이름</button>
-					<div class="inp"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" value="홍길동" /></div>
-				</div>
-				<br />
-				<br />
-				<div class="inpTxt active error">
-					<button class="inpTit" type="button" aria-expanded="true">이름</button>
-					<div class="inp" aria-hidden="false"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" value="홍길동" /></div>
-				</div>
-				<br />
-				<br />
-				<div class="inpTxt disabled">
-					<button type="button" class="inpTit" aria-expanded="false">이름</button>
-					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" /></div>
-				</div>
-				<br />
-				<br />
-				<div class="inpTxt active disabled">
-					<button type="button" class="inpTit" aria-expanded="false">이름</button>
-					<div class="inp" aria-hidden="true"><input type="text" title="이름을 입력하세요." placeholder="이름을 입력하세요" value="홍길동" disabled="disabled" /></div>
-				</div>
-				<br />
-				<br />
-				<div class="inpTxt active disabled">
-					<button type="button" class="inpTit" aria-expanded="true">이름</button>
-					<div class="inp" aria-hidden="false"><span>홍길동 span TAG</span></div>
-				</div>
-			</div> -->
 			<div class="guide_case">
 				<div class="inpTxt">
 					<span class="inpTit">이름</span>
@@ -325,10 +291,45 @@
 			</div>
 		</div>
 
+		<div class="guide_group">
+			<h2 class="guideH2">INPUT - DATE</h2>
+
+			<div class="guide_case">
+				<div class="formDateItem">
+					<div class="inner">
+						<div class="inpTxt">
+							<span class="inpTit">시작일</span>
+							<div class="inp" aria-hidden="true"><input type="text" title="시작일을 입력하세요." /></div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<div class="formDateItem">
+					<div class="inner">
+						<div class="inpTxt">
+							<span class="inpTit">시작일</span>
+							<div class="inp" aria-hidden="true"><input type="text" title="시작일을 입력하세요." /></div>
+						</div>
+						<span class="split">~</span>
+						<div class="inpTxt">
+							<span class="inpTit">종료일</span>
+							<div class="inp" aria-hidden="true"><input type="text" title="종료일을 입력하세요." /></div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+			</div>
+		</div>
+
 
 
 	</section>
 </div>
+
+<script type="text/javascript">
+$('.formDateItem input').datepicker();
+</script>
 
 </body>
 </html>

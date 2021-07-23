@@ -123,6 +123,12 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpSelect"].disabled .btnSelect:disabled {pointer-events:none;}
 [class^="inpSelect"].disabled .inp .inpView {color:#9f9f9f;}
 
+/* form - date */
+[class^="formDateItem"] {overflow:hidden;position:relative;}
+[class^="formDateItem"] .inner {display:flex;margin:0 -24px 0 0;}
+[class^="formDateItem"] .inpTxt {width:100%;margin:0 24px 0 0;}
+[class^="formDateItem"] .split {display:block;position:absolute;left:50%;top:0;bottom:0;width:24px;line-height:68px;font-size:14px;color:#101010;text-align:center;transform:translate(-50%, 0);}
+
 /* form - checkbox */
 [class^="inpCheck"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}
 [class^="inpCheck"] input[type="checkbox"] {display:block;position:absolute;left:0;top:0;width:24px;height:24px;background-image:url('../images/ico_check.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;}
@@ -149,13 +155,89 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpRadio"] > label {display:block;margin:0 0 0 10px;padding:2px 0;line-height:20px;font-size:16px;font-weight:700;color:#101010;}
 [class^="inpRadio"] input[type="radio"]:checked {background-position:center bottom;}
 
-/* form - input identification card */
-
 /* form - input guide */
 [class^="inpMssg"] {display:block;margin:8px 0 0;font-size:12px;color:#707070;}
 
 /* flag badges */
 [class^="flagItem"] {display:inline-block;padding:0 8px;font-size:12px;color:#6856f2;line-height:24px;border-radius:12px;background-color:#f3f1fe;}
+
+/* tab */
+[class^="tabBox"] {background-color:#fff;}
+[class^="tabBox"] .tabInner ul {display:flex;}
+[class^="tabBox"] .tabInner ul li {width:100%;}
+[class^="tabBox"] .tabInner ul li a,
+[class^="tabBox"] .tabInner ul li button {display:block;box-sizing:border-box;width:100%;position:relative;text-align:center;}
+[class^="tabBox"] .tabInner ul li a em,
+[class^="tabBox"] .tabInner ul li button em {display:inline-block;padding:14px 0;line-height:20px;font-size:16px;color:#9f9f9f;}
+[class^="tabBox"] .tabInner ul li.active a em,
+[class^="tabBox"] .tabInner ul li.active button em {font-weight:700;color:#101010;}
+[class^="tabBox"] .tabInner ul li.active a:after,
+[class^="tabBox"] .tabInner ul li.active button:after {display:block;content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background-color:#101010;}
+
+.tabBox02 {margin:0 -20px;padding:0 8px;background-color:#f4f4f4;}
+.tabBox02 .tabInner ul li {width:auto;}
+.tabBox02 .tabInner ul li a,
+.tabBox02 .tabInner ul li button {padding:0 12px;}
+.tabBox02 .tabInner ul li a em,
+.tabBox02 .tabInner ul li button em {padding:18px 0}
+.tabBox02 .tabInner ul li.active a:after,
+.tabBox02 .tabInner ul li.active button:after {display:none;}
+
+.tabBox03 .tabInner ul li {width:auto;}
+.tabBox03 .tabInner ul li a,
+.tabBox03 .tabInner ul li button {padding:0 16px;}
+.tabBox03 .tabInner ul li a em,
+.tabBox03 .tabInner ul li button em {padding:6px 0;font-size:14px;}
+.tabBox03 .tabInner ul li.active a,
+.tabBox03 .tabInner ul li.active button {border-radius:16px;background-color:#4b4e65;}
+.tabBox03 .tabInner ul li.active a em,
+.tabBox03 .tabInner ul li.active button em {font-weight:400;color:#fff;}
+.tabBox03 .tabInner ul li.active a:after,
+.tabBox03 .tabInner ul li.active button:after {display:none;}
+
+.tabBox04 {padding:4px;border-radius:6px;background-color:#eff1f5;}
+.tabBox04 .tabInner ul li a em,
+.tabBox04 .tabInner ul li button em {padding:6px 0;font-size:14px;}
+.tabBox04 .tabInner ul li.active a,
+.tabBox04 .tabInner ul li.active button {border-radius:6px;background-color:#fff;}
+.tabBox04 .tabInner ul li.active a em,
+.tabBox04 .tabInner ul li.active button em {font-weight:400;}
+.tabBox04 .tabInner ul li.active a:after,
+.tabBox04 .tabInner ul li.active button:after {display:none;}
+
+.tabBox05 {display:inline-block;border-radius:100px;background-color:#f2f3f5;}
+.tabBox05 .tabInner ul li a,
+.tabBox05 .tabInner ul li button {padding:0 15px;border-radius:100px;}
+.tabBox05 .tabInner ul li a em,
+.tabBox05 .tabInner ul li button em {padding:4px 0;font-size:12px;}
+.tabBox05 .tabInner ul li.active a,
+.tabBox05 .tabInner ul li.active button {background-color:#4b4e65;}
+.tabBox05 .tabInner ul li.active a em,
+.tabBox05 .tabInner ul li.active button em {font-weight:400;color:#fff;}
+.tabBox05 .tabInner ul li.active a:after,
+.tabBox05 .tabInner ul li.active button:after {display:none;}
+
+.tabDateBox {background-color:#fff;}
+.tabDateBox .tabDateInner ul {display:flex;}
+.tabDateBox .tabDateInner ul.swiper-wrapper {width:10000em;}
+.tabDateBox .tabDateInner ul li {width:auto;}
+.tabDateBox .tabDateInner ul li a,
+.tabDateBox .tabDateInner ul li button {box-sizing:border-box;min-width:68px;min-height:68px;padding:0 8px;border-radius:16px;}
+.tabDateBox .tabDateInner ul li a .sDate,
+.tabDateBox .tabDateInner ul li button .sDate {display:block;padding:0;line-height:16px;font-size:11px;color:#cfcfcf;}
+.tabDateBox .tabDateInner ul li a .bDate,
+.tabDateBox .tabDateInner ul li button .bDate {display:block;line-height:30px;font-size:20px;font-weight:700;color:#9f9f9f;}
+.tabDateBox .tabDateInner ul li a .pDate,
+.tabDateBox .tabDateInner ul li button .pDate {display:block;padding:0;line-height:20px;font-size:13px;font-weight:400;color:#9f9f9f;}
+.tabDateBox .tabDateInner ul li.active a,
+.tabDateBox .tabDateInner ul li.active button {background-color:#6856f2;}
+.tabDateBox .tabDateInner ul li.active a .sDate,
+.tabDateBox .tabDateInner ul li.active button .sDate {font-weight:400;color:#fff;}
+.tabDateBox .tabDateInner ul li.active a .bDate,
+.tabDateBox .tabDateInner ul li.active button .bDate {color:#fff;}
+.tabDateBox .tabDateInner ul li.active a .pDate,
+.tabDateBox .tabDateInner ul li.active button .pDate {color:#fff;font-weight:400;}
+
 
 /*********************************************************************************************************
 	layer pop

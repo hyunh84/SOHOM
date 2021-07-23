@@ -1,10 +1,13 @@
 // Input Text, Search active
-$(document).on('focusin', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"]', function() {
+$(document).on('focusin change', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"]', function() {
 	var _this = $(this);
+	var _val = _this.val();
 	var _inpBox = _this.closest('[class^="inpTxt"]');
 
 	if(!_inpBox.hasClass('active')) {
 		_inpBox.addClass('active');
+	}else if(_inpBox.hasClass('active') && _val == '') {
+		_inpBox.removeClass('active');
 	}
 });
 
@@ -13,8 +16,6 @@ $(document).on('focusout', '[class^="inpTxt"] input[type="text"], [class^="inpTx
 	var _this = $(this);
 	var _val = _this.val();
 	var _inpBox = _this.closest('[class^="inpTxt"]');
-	var _inpTit = $('.inpTit', _inpBox);
-	var _inp = _this.parent();
 
 	if(_val == '') {
 		_inpBox.removeClass('active');
@@ -67,39 +68,6 @@ $(document).on('click', '[class^="inpSelect"] .btnSelect', function() {
 	});
 
 });
-// $(document).on('click', '.inpSelect .inpTit, .inpSelect select', function() {
-// 	var _this = $(this);
-// 	var _selectWrap = _this.closest('.inpSelect');
-// 	var _selectBox = $('.selectbox', _selectWrap);
-// 	var _select = $('select', _selectBox);
-// 	var _opt = $('option', _select);
-// 	var _html = createSelectHtml(_selectWrap);
-
-// 	$('.wrap').append(_html);
-// 	layerOpenFn('#selectBundleBox', _this, function() {
-// 		$('#selectBundleBox').remove();
-// 	});
-
-// 	$('#selectBundleBox .layerOptionBox button').click(function() {
-// 		var _optItem = $(this);
-// 		var _optItemIdx = _optItem.closest('li').index();
-// 		_opt.prop('selected', false);
-// 		_opt.eq(_optItemIdx).prop('selected', true);
-
-// 		if(_selectBox.is(':hidden')) {
-// 			_this.attr('aria-expanded', 'true');
-// 			_selectBox.attr('aria-hidden', 'false');
-// 			_selectWrap.addClass('active');
-// 			_select.focus();
-// 		}
-
-// 		layerCloseFn('#selectBundleBox', function() {
-// 			_select.focus();
-// 			$('#selectBundleBox').remove();
-// 		});
-// 	});
-// });
-
 
 // Button Switch 
 $(document).on('click', '[class^="btnSwitch"]', function() {
@@ -123,9 +91,60 @@ $(document).on('click', '[class^="btnChkCase"] button', function() {
 		$('button', _wrapper).removeClass('active');
 		_this.addClass('active');
 	}
-
-	
 });
+
+// tab box
+$(document).on('click', '[class^="tabBox"] .tabInner ul li button, [class^="tabBox"] .tabInner ul li a', function() {
+	var _this = $(this);
+	var _thisItem = _this.parent();
+	var _wrapper = _this.closest('[class^="tabBox"]');
+	var _tabCase = $('.tabCase', _wrapper);
+	var _tabItems = $('li', _tabCase);
+
+	if(!_thisItem.parent().hasClass('active')) {
+		console.log(_tabItems)
+		_tabItems.removeClass('active');
+		_thisItem.addClass('active');
+	}
+});
+
+/*********************************************************************************************************
+	tab free scroll fnc
+*********************************************************************************************************/
+var tabFreeScrollFn = function(target, options) {
+	var _target = $(target);
+	var _swiperWrap = $("> div", _target);
+	var _tabCase = $('.tabCase', _swiperWrap);
+	var _tabItems = $('li', _tabCase);
+	var _tabBtn = $('button, a', _tabItems);
+	var _options = options || {};
+	var _defaulOpt = {
+		initialSlide : 0,
+		freeMode : true,
+		slidesPerView :'auto',
+		spaceBetween : 5
+	}
+	var _extendOpt = Object.assign(_defaulOpt, _options);
+	var _swiperLib = new Swiper(_swiperWrap[0], _extendOpt);
+
+	var _chTabItemFn = function(target) {
+		_tabItems.removeClass('active');
+		target.addClass('active');
+	}
+
+	if(_extendOpt.initialSlide > 0) _chTabItemFn(_tabItems.eq(_extendOpt.initialSlide));
+
+	_tabBtn.on('click', function() {
+		var _this = $(this);
+		var _thisCase = _this.parent();
+		var _thisIdx = _thisCase.index();
+		
+		if(!_thisCase.hasClass('active')) {
+			_chTabItemFn(_thisCase);
+			_swiperLib.slideTo(_thisIdx);
+		}
+	});
+}
 
 /*********************************************************************************************************
 	layer pop

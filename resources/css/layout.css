@@ -1,1 +1,3 @@
 @charset "utf-8";
+
+.wrap {overflow:hidden;box-sizing:border-box;height:auto;min-height:100%;}
