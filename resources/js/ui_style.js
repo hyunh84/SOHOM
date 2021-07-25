@@ -1,5 +1,5 @@
 // Input Text, Search active
-$(document).on('click focusin change', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"], [class^="inpTxt"] input[type="date"], [class^="inpTxt"] input[type="month"], [class^="inpTxt"] input[type="time"]', function() {
+$(document).on('click focusin change', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"], [class^="inpTxt"] input[type="date"], [class^="inpTxt"] input[type="month"], [class^="inpTxt"] input[type="time"], [class^="inpTxt"] input[type="datetime-local"]', function() {
 	var _this = $(this);
 	var _val = _this.val();
 	var _inpBox = _this.closest('[class^="inpTxt"]');
@@ -12,7 +12,7 @@ $(document).on('click focusin change', '[class^="inpTxt"] input[type="text"], [c
 });
 
 // Input Text Focus Out
-$(document).on('focusout', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"], [class^="inpTxt"] input[type="date"], [class^="inpTxt"] input[type="month"], [class^="inpTxt"] input[type="time"]', function() {
+$(document).on('focusout', '[class^="inpTxt"] input[type="text"], [class^="inpTxt"] input[type="tel"], [class^="inpTxt"] input[type="password"], [class^="inpTxt"] input[type="date"], [class^="inpTxt"] input[type="month"], [class^="inpTxt"] input[type="time"], [class^="inpTxt"] input[type="datetime-local"]', function() {
 	var _this = $(this);
 	var _val = _this.val();
 	var _inpBox = _this.closest('[class^="inpTxt"]');
