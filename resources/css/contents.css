@@ -81,7 +81,8 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpTxt"] .inp input[type="password"],
 [class^="inpTxt"] .inp input[type="date"],
 [class^="inpTxt"] .inp input[type="month"],
-[class^="inpTxt"] .inp input[type="time"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;}
+[class^="inpTxt"] .inp input[type="time"],
+[class^="inpTxt"] .inp input[type="datetime-local"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;}
 [class^="inpTxt"].active {padding:10px 0;border:2px solid #6856f2;background-color:#f2f3f5}
 [class^="inpTxt"].active .inpTit  {padding:0 15px;font-size:12px;cursor:default;pointer-events:none;}
 [class^="inpTxt"].active .inp {position:static;height:24px;}
@@ -93,7 +94,8 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpTxt"].disabled .inp input[type="password"]:disabled,
 [class^="inpTxt"].disabled .inp input[type="date"],
 [class^="inpTxt"].disabled .inp input[type="month"],
-[class^="inpTxt"].disabled .inp input[type="time"]  {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
+[class^="inpTxt"].disabled .inp input[type="time"],
+[class^="inpTxt"].disabled .inp input[type="datetime-local"]  {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
 
 /* form - input text search */
 .inpTxtSrch .inpTit {padding:22px 15px 22px 45px;}
