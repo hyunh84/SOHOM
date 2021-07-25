@@ -326,6 +326,39 @@
 				<br />
 				<br />
 			</div>
+
+			<div class="guide_case">
+				<div class="formDateItem">
+					<div class="inner">
+						<div class="inpTxt">
+							<span class="inpTit">시작일</span>
+							<div class="inp">
+								<input type="date" title="날짜를 입력하세요." readonly="readonly" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<div class="formDateItem">
+					<div class="inner">
+						<div class="inpTxt">
+							<span class="inpTit">시작일</span>
+							<div class="inp">
+								<input type="month" title="시작일을 입력하세요." readonly="readonly" />
+							</div>
+						</div>
+						<span class="split">~</span>
+						<div class="inpTxt">
+							<span class="inpTit">종료일</span>
+							<div class="inp">
+								<input type="time" title="종료일을 입력하세요." readonly="readonly" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+			</div>
 		</div>
 
 
@@ -334,7 +367,7 @@
 </div>
 
 <script type="text/javascript">
-$('.formDateItem input').datepicker({
+$('.formDateItem input[type="text"]').datepicker({
 	ignoreReadonly: true
 });
 </script>
