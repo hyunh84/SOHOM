@@ -584,28 +584,45 @@
 
 			<div class="guide_case">
 				<div class="inpResident">
-					<span class="inpTit" aria-hidden="true">주민등록번호</span>
+					<span class="inpTit">주민등록번호</span>
 					<div class="inner">
 						<div class="resident01">
-							<input type="text" title="주민번호 앞자리를 입력하세요." />
+							<input type="tel" maxlength="6" title="주민번호 앞자리를 입력하세요." />
 						</div>
 						<span class="split">~</span>
 						<div class="resident02">
-							<input type="text" title="주민번호 뒷자리를 입력하세요." />
+							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." /></span>
+							<i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
 						</div>
 					</div>
 				</div>
 				<br />
 				<br />
-				<div class="inpResident">
-					<span class="inpTit" aria-hidden="true">주민등록번호</span>
+				<div class="inpResident active">
+					<span class="inpTit">주민등록번호</span>
 					<div class="inner">
 						<div class="resident01">
-							<input type="text" title="주민번호 앞자리를 입력하세요." />
+							<input type="tel" maxlength="6" title="주민번호 생년월일을 입력하세요." value="990505" />
 						</div>
-						<span class="split">~</span>
+						<span class="split">-</span>
 						<div class="resident02">
-							<input type="text" title="주민번호 뒷자리를 입력하세요." />
+							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" /></span>
+							<i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				<div class="inpResident active error">
+					<span class="inpTit">주민등록번호</span>
+					<div class="inner">
+						<div class="resident01">
+							<input type="tel" maxlength="6" title="주민번호 생년월일을 입력하세요." value="990505" />
+						</div>
+						<span class="split">-</span>
+						<div class="resident02">
+							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" /></span>
+							<i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i>
 						</div>
 					</div>
 				</div>
