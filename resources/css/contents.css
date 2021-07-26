@@ -82,10 +82,17 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpTxt"] .inp input[type="date"],
 [class^="inpTxt"] .inp input[type="month"],
 [class^="inpTxt"] .inp input[type="time"],
-[class^="inpTxt"] .inp input[type="datetime-local"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;}
+[class^="inpTxt"] .inp input[type="datetime-local"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;opacity:0;}
 [class^="inpTxt"].active {padding:10px 0;border:2px solid #6856f2;background-color:#f2f3f5}
 [class^="inpTxt"].active .inpTit  {padding:0 15px;font-size:12px;cursor:default;pointer-events:none;}
 [class^="inpTxt"].active .inp {position:static;height:24px;}
+[class^="inpTxt"].active .inp input[type="text"],
+[class^="inpTxt"].active .inp input[type="tel"],
+[class^="inpTxt"].active .inp input[type="password"],
+[class^="inpTxt"].active .inp input[type="date"],
+[class^="inpTxt"].active .inp input[type="month"],
+[class^="inpTxt"].active .inp input[type="time"],
+[class^="inpTxt"].active .inp input[type="datetime-local"] {opacity:1;}
 [class^="inpTxt"].error {border:2px solid #ed2e7e;background-color:#feeef5}
 [class^="inpTxt"].disabled {border:2px solid #dbdee3;background-color:#dbdee3;}
 [class^="inpTxt"].disabled .inpTit {color:#b7b7b7;cursor:default;pointer-events:none;}
@@ -95,7 +102,7 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpTxt"].disabled .inp input[type="date"],
 [class^="inpTxt"].disabled .inp input[type="month"],
 [class^="inpTxt"].disabled .inp input[type="time"],
-[class^="inpTxt"].disabled .inp input[type="datetime-local"]  {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
+[class^="inpTxt"].disabled .inp input[type="datetime-local"] {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
 
 /* form - input text search */
 .inpTxtSrch .inpTit {padding:22px 15px 22px 45px;}
@@ -133,9 +140,16 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 
 /* form - date */
 [class^="formDateItem"] {overflow:hidden;position:relative;}
-[class^="formDateItem"] .inner {display:flex;margin:0 -24px 0 0;}
-[class^="formDateItem"] .inpTxt {width:100%;margin:0 24px 0 0;}
+[class^="formDateItem"] .inner {display:flex;}
+[class^="formDateItem"] .inpTxt {width:100%;}
 [class^="formDateItem"] .split {display:block;position:absolute;left:50%;top:0;bottom:0;width:24px;line-height:68px;font-size:14px;color:#101010;text-align:center;transform:translate(-50%, 0);}
+.formDateItem02 .inner {justify-content:space-between;}
+.formDateItem02 .inpTxt {width:calc(50% - 10px);}
+.formDateItem02 .split {width:6%;}
+
+
+/* form - phone */
+[class^="formPhoneItem"] {}
 
 /* form - checkbox */
 [class^="inpCheck"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}
