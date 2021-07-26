@@ -46,12 +46,12 @@ $(document).on('focusout', '[class^="inpTxt"] input[type="date"], [class^="inpTx
 	}
 });
 
-//Selectbox form active
+// Selectbox form active
 var createSelectHtml = function(target) {
 	var _selectWrap = target;
 	var _title = $('.btnSelect em', _selectWrap).text();
 	var _optBox = $('.selectOpt', _selectWrap);
-	var _optItems = $('li', _selectWrap);
+	var _optItems = $('li', _optBox);
 	var _html = '';
 
 	_html += '<article class="layerWrap floatB" id="selectBundleBox" aria-hidden="true"><div class="layerBox"><header class="header">';
@@ -69,6 +69,8 @@ var createSelectHtml = function(target) {
 $(document).on('click', '[class^="inpSelect"] .btnSelect', function() {
 	var _this = $(this);
 	var _selectWrap = _this.closest('[class^="inpSelect"]');
+	var _optBox = $('.selectOpt', _selectWrap);
+	var _optItems = $('li', _optBox);
 	var _viewBox = $('.inp', _selectWrap);
 	var _view = $('.inpView', _viewBox);
 	var _html = createSelectHtml(_selectWrap);
@@ -83,10 +85,44 @@ $(document).on('click', '[class^="inpSelect"] .btnSelect', function() {
 
 	$('#selectBundleBox .layerOptionBox button').click(function() {
 		var _optItem = $(this);
+		var _optItemIdx = _optItem.parents().index();
 
 		$('body').removeClass('isPop');
 		_view.text(_optItem.text());
+		_optItems.attr('aria-selected', false).eq(_optItemIdx).attr('aria-selected', true);
 		_selectWrap.addClass('active');
+		_this.focus();
+		$('#selectBundleBox').remove();
+	});
+
+});
+
+// Form Phone
+$(document).on('click', '[class^="inpPhone"] .btnSelect', function() {
+	var _this = $(this);
+	var _phoneWrap = _this.closest('[class^="inpPhone"]');
+	var _optBox = $('.selectOpt', _phoneWrap);
+	var _optItems = $('li', _optBox);
+	var _viewBox = $('.PhCode', _phoneWrap);
+	var _view = $('.view', _viewBox);
+	var _html = createSelectHtml(_phoneWrap);
+
+	$('.wrap').append(_html);
+
+	layerOpenFn('#selectBundleBox', _this);
+
+	$('#selectBundleBox .btnCloseLayer').click(function() {
+		$('#selectBundleBox').remove();
+	});
+
+	$('#selectBundleBox .layerOptionBox button').click(function() {
+		var _optItem = $(this);
+		var _optItemIdx = _optItem.parents().index();
+
+		$('body').removeClass('isPop');
+		_view.text(_optItem.text());
+		_optItems.attr('aria-selected', false).eq(_optItemIdx).attr('aria-selected', true);
+		_phoneWrap.addClass('active');
 		_this.focus();
 		$('#selectBundleBox').remove();
 	});

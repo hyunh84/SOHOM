@@ -99,10 +99,10 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpTxt"].disabled .inp input[type="text"]:disabled,
 [class^="inpTxt"].disabled .inp input[type="tel"]:disabled,
 [class^="inpTxt"].disabled .inp input[type="password"]:disabled,
-[class^="inpTxt"].disabled .inp input[type="date"],
-[class^="inpTxt"].disabled .inp input[type="month"],
-[class^="inpTxt"].disabled .inp input[type="time"],
-[class^="inpTxt"].disabled .inp input[type="datetime-local"] {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
+[class^="inpTxt"].disabled .inp input[type="date"]:disabled,
+[class^="inpTxt"].disabled .inp input[type="month"]:disabled,
+[class^="inpTxt"].disabled .inp input[type="time"]:disabled,
+[class^="inpTxt"].disabled .inp input[type="datetime-local"]:disabled {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
 
 /* form - input text search */
 .inpTxtSrch .inpTit {padding:22px 15px 22px 45px;}
@@ -123,12 +123,12 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 
 /* form - input selectbox */
 [class^="inpSelect"] {display:inline-block;box-sizing:border-box;position:relative;width:100%;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
-[class^="inpSelect"]:before {display:block;content:"";position:absolute;right:15px;top:50%;width:10px;height:7px;background-image:url('../images/ico_selectbox.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;}
+[class^="inpSelect"]:before {display:block;content:"";position:absolute;right:15px;top:50%;width:10px;height:7px;background-image:url('../images/ico_selectbox.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;transform:translate(0, -50%);}
 [class^="inpSelect"] .btnSelect {position:absolute;left:0;top:0;width:100%;height:100%;}
 [class^="inpSelect"] .inpTit {display:block;box-sizing:border-box;width:100%;padding:22px 15px;line-height:24px;font-size:18px;color:#9f9f9f;text-align:left;}
 [class^="inpSelect"] .inp {display:none;}
 [class^="inpSelect"] .inp .inpView {display:block;box-sizing:border-box;width:100%;line-height:20px;padding:2px 30px 2px 15px;font-size:18px;color:#101010;}
-[class^="inpSelect"] .inp .selectOpt[aria-hidden="true"] {display:none;}
+[class^="inpSelect"] .inp .selectOpt {overflow:hidden;width:0;height:0;padding:0;margin:0;line-height:0;}
 [class^="inpSelect"].active {padding:10px 0;border:2px solid #6856f2;background-color:#f2f3f5;}
 [class^="inpSelect"].active .inpTit {padding:0 15px;font-size:12px;}
 [class^="inpSelect"].active .inp {display:block;}
@@ -147,9 +147,45 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 .formDateItem02 .inpTxt {width:calc(50% - 10px);}
 .formDateItem02 .split {width:6%;}
 
-
 /* form - phone */
-[class^="formPhoneItem"] {}
+[class^="inpPhone"] {display:inline-block;box-sizing:border-box;position:relative;width:100%;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
+[class^="inpPhone"] .inpTit {display:block;box-sizing:border-box;width:100%;padding:22px 15px;line-height:24px;font-size:18px;color:#9f9f9f;text-align:left;}
+[class^="inpPhone"] .inner {overflow:hidden;height:0;padding:0;margin:0;line-height:0;}
+[class^="inpPhone"] .inner .PhCode {width:30%;}
+[class^="inpPhone"] .inner .PhCode .btnSelect {position:absolute;left:0;top:0;width:100%;height:100%;}
+[class^="inpPhone"] .inner .PhCode .btnSelect:before {display:block;content:"";position:absolute;right:15px;top:50%;width:10px;height:7px;background-image:url('../images/ico_selectbox.png');background-repeat:no-repeat;background-position:center top;background-size:100% auto;transform:translate(0, -50%);}
+[class^="inpPhone"] .inner .PhCode .view {display:block;box-sizing:border-box;width:100%;min-height:24px;line-height:20px;padding:2px 15px;font-size:18px;color:#101010;}
+[class^="inpPhone"] .inner .PhCode .selectOpt {overflow:hidden;width:0;height:0;padding:0;margin:0;line-height:0;}
+[class^="inpPhone"] .inner .phNum {display:none;position:relative;width:70%;height:24px;}
+[class^="inpPhone"] .inner .phNum:before {display:block;content:"";position:absolute;left:14px;top:50%;width:2px;height:24px;background-color:#6856f2;transform:translate(0, -50%);}
+[class^="inpPhone"] .inner .phNum input[type="text"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px 0 30px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;}
+[class^="inpPhone"].active {padding:10px 0;border:2px solid #6856f2;background-color:#f2f3f5;}
+[class^="inpPhone"].active > .btnSelect {display:none;}
+[class^="inpPhone"].active .inpTit {padding:0 15px;font-size:12px;}
+[class^="inpPhone"].active .inner {display:flex;justify-content:space-between;align-items:center;height:auto;}
+[class^="inpPhone"].active .inner .PhCode {position:relative;}
+[class^="inpPhone"].active .inner .PhCode .btnSelect:before {right:0;}
+[class^="inpPhone"].active .inner .phNum {display:block;}
+[class^="inpPhone"].error {border:2px solid #ed2e7e;background-color:#feeef5}
+[class^="inpPhone"].error .inner .phNum:before {background-color:#ed2e7e;}
+[class^="inpPhone"].disabled {border:2px solid #dbdee3;background-color:#dbdee3;}
+[class^="inpPhone"].disabled .inner .PhCode .btnSelect:before {background-position:center bottom;}
+[class^="inpPhone"].disabled .inner .PhCode .btnSelect:disabled {pointer-events:none;}
+[class^="inpPhone"].disabled .inner .PhCode .view {color:#9f9f9f;}
+[class^="inpPhone"].disabled .inner .phNum:before {display:none;}
+[class^="inpPhone"].disabled .inner .phNum input[type="text"]:disabled {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
+
+/* form - 주민등록번호 */
+[class^="inpResident"] {display:inline-block;box-sizing:border-box;position:relative;width:100%;border:2px solid #f2f3f5;border-radius:8px;background-color:#f2f3f5;}
+[class^="inpResident"] .inpTit {display:block;box-sizing:border-box;width:100%;padding:22px 15px;line-height:24px;font-size:18px;color:#9f9f9f;text-align:left;}
+[class^="inpResident"] .inner {position:absolute;left:0;top:0;right:0;bottom:0;}
+[class^="inpResident"] .inner .resident01 {position:absolute;left:0;top:0;right:0;bottom:0;}
+[class^="inpResident"] .inner .resident02 {display:none;}
+[class^="inpResident"] .inner .split {display:none;}
+
+[class^="inpResident"] .inner [class^="resident"] input[type="text"],
+[class^="inpResident"] .inner [class^="resident"] input[type="tel"],
+[class^="inpResident"] .inner [class^="resident"] input[type="password"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;opacity:0;}
 
 /* form - checkbox */
 [class^="inpCheck"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}
@@ -164,9 +200,7 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 /* form - checkbox btn design */
 [class^="btnChkCase"] {overflow:hidden;}
 [class^="btnChkCase"] .flexInner {display:flex;margin:0 -8px 0 0;}
-[class^="btnChkCase"] .flexInner button {margin:0 8px 0 0;}
-
-[class^="btnChkCase"] .flexInner button {display:block;box-sizing:border-box;width:100%;text-align:center;border:1px solid #e6e6e6;border-radius:8px;background-color:#fff;outline:none;}
+[class^="btnChkCase"] .flexInner button {display:block;box-sizing:border-box;width:100%;margin:0 8px 0 0;text-align:center;border:1px solid #e6e6e6;border-radius:8px;background-color:#fff;outline:none;}
 [class^="btnChkCase"] .flexInner button em {display:inline-block;padding:14px 0;line-height:18px;font-size:14px;font-weight:400;color:#404040;vertical-align:top;}
 [class^="btnChkCase"] .flexInner button.active {border:1px solid #f3f1fe;background-color:#f3f1fe;}
 [class^="btnChkCase"] .flexInner button.active em {color:#6856f2;font-weight:700;}
