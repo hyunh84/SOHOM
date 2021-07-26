@@ -188,7 +188,7 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpResident"] .resident02 > span {display:block;float:left;width:14%;height:24px;}
 [class^="inpResident"] .resident02 input[type="text"],
 [class^="inpResident"] .resident02 input[type="tel"],
-[class^="inpResident"] .resident02 input[type="password"] {width:100%;height:29px;margin:-6px 0 0;padding:0;text-align:center;vertical-align:top;}
+[class^="inpResident"] .resident02 input[type="password"] {width:100%;height:24px;padding:0;text-align:center;vertical-align:top;}
 [class^="inpResident"] .resident02 input[type="text"]::placeholder,
 [class^="inpResident"] .resident02 input[type="tel"]::placeholder,
 [class^="inpResident"] .resident02 input[type="password"]::placeholder {line-height:24px;font-size:12px;color:#b7b7b7;}
