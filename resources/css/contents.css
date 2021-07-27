@@ -183,7 +183,7 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpResident"] [class^="resident"] input[type="tel"],
 [class^="inpResident"] [class^="resident"] input[type="password"] {box-sizing:border-box;width:100%;height:100%;padding:0 15px;font-size:18px;color:#101010;border:none;background-color:transparent;outline:none;opacity:0;}
 [class^="inpResident"] .resident01 {box-sizing:border-box;width:100%;height:100%;}
-[class^="inpResident"] .resident02 {display:none;position:relative;box-sizing:border-box;padding:0 15px;align-items:center;}
+[class^="inpResident"] .resident02 {overflow:hidden;position:absolute;box-sizing:border-box;width:0;height:0;padding:0;line-height:0;align-items:center;}
 [class^="inpResident"] .resident02:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;padding:0;margin:0;line-height:0;font-size:1px;}
 [class^="inpResident"] .resident02 > span {display:block;float:left;width:14%;height:24px;}
 [class^="inpResident"] .resident02 input[type="text"],
@@ -201,9 +201,14 @@ a, button, label {-webkit-tap-highlight-color: rgba(255,255,255,0);}
 [class^="inpResident"].active [class^="resident"] input[type="tel"],
 [class^="inpResident"].active [class^="resident"] input[type="password"] {opacity:1;}
 [class^="inpResident"].active .resident01 {width:calc(50% - 10px);}
-[class^="inpResident"].active .resident02 {display:block;width:calc(50% - 10px);}
+[class^="inpResident"].active .resident02 {position:static;width:calc(50% - 10px);height:auto;padding:0 15px;}
 [class^="inpResident"].active .split {display:block;font-size:16px;font-weight:bold;}
 [class^="inpResident"].error {border:2px solid #ed2e7e;background-color:#feeef5}
+[class^="inpResident"].disabled {border:2px solid #dbdee3;background-color:#dbdee3;}
+[class^="inpResident"].disabled input[type="text"]:disabled,
+[class^="inpResident"].disabled input[type="tel"]:disabled,
+[class^="inpResident"].disabled input[type="password"]:disabled {color:#9f9f9f;-webkit-text-fill-color:#9f9f9f;}
+[class^="inpResident"].disabled .resident02 i {color:#9f9f9f;}
 
 /* form - checkbox */
 [class^="inpCheck"] {display:inline-block;position:relative;min-height:24px;padding:0 0 0 24px;vertical-align:middle;}

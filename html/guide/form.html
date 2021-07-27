@@ -100,7 +100,6 @@
 				</div>
 				<div class="inpMssg">여기에 가이드 문구가 들어갑니다</div>
 				<br />
-				<br />
 				<div class="inpTxt active">
 					<span class="inpTit">이름</span>
 					<div class="inp"><input type="text" title="이름을 입력하세요." value="홍길동" /></div>
@@ -314,7 +313,7 @@
 								<input type="text" title="시작일을 입력하세요." readonly="readonly" />
 							</div>
 						</div>
-						<span class="split">~</span>
+						<span class="split" aria-hidden="true">~</span>
 						<div class="inpTxt">
 							<span class="inpTit">종료일</span>
 							<div class="inp">
@@ -345,7 +344,7 @@
 								<input type="text" title="시작일을 입력하세요." disabled />
 							</div>
 						</div>
-						<span class="split">~</span>
+						<span class="split" aria-hidden="true">~</span>
 						<div class="inpTxt disabled">
 							<span class="inpTit">종료일</span>
 							<div class="inp">
@@ -377,7 +376,7 @@
 								<input type="month" title="시작일을 입력하세요." />
 							</div>
 						</div>
-						<span class="split">~</span>
+						<span class="split" aria-hidden="true">~</span>
 						<div class="inpTxt">
 							<span class="inpTit">종료일</span>
 							<div class="inp">
@@ -430,7 +429,7 @@
 								<input type="month" title="시작일을 입력하세요." disabled />
 							</div>
 						</div>
-						<span class="split">~</span>
+						<span class="split" aria-hidden="true">~</span>
 						<div class="inpTxt disabled">
 							<span class="inpTit">종료일</span>
 							<div class="inp">
@@ -589,10 +588,10 @@
 						<div class="resident01">
 							<input type="tel" maxlength="6" title="주민번호 앞자리를 입력하세요." />
 						</div>
-						<span class="split">~</span>
+						<span class="split" aria-hidden="true">~</span>
 						<div class="resident02">
 							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" /></span>
-							<i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i>
+							<i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i>
 						</div>
 					</div>
 				</div>
@@ -604,10 +603,10 @@
 						<div class="resident01">
 							<input type="tel" maxlength="6" title="주민번호 생년월일을 입력하세요." value="990505" />
 						</div>
-						<span class="split">-</span>
+						<span class="split" aria-hidden="true">-</span>
 						<div class="resident02">
 							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" /></span>
-							<i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i>
+							<i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i>
 						</div>
 					</div>
 				</div>
@@ -619,10 +618,40 @@
 						<div class="resident01">
 							<input type="tel" maxlength="6" title="주민번호 생년월일을 입력하세요." value="990505" />
 						</div>
-						<span class="split">-</span>
+						<span class="split" aria-hidden="true">-</span>
 						<div class="resident02">
 							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" /></span>
-							<i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i> <i>●</i>
+							<i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				<div class="inpResident disabled">
+					<span class="inpTit">주민등록번호</span>
+					<div class="inner">
+						<div class="resident01">
+							<input type="tel" maxlength="6" title="주민번호 생년월일을 입력하세요." disabled />
+						</div>
+						<span class="split" aria-hidden="true">-</span>
+						<div class="resident02">
+							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" disabled /></span>
+							<i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				<div class="inpResident active disabled">
+					<span class="inpTit">주민등록번호</span>
+					<div class="inner">
+						<div class="resident01">
+							<input type="tel" maxlength="6" title="주민번호 생년월일을 입력하세요." value="990505" disabled />
+						</div>
+						<span class="split" aria-hidden="true">-</span>
+						<div class="resident02">
+							<span><input type="tel" maxlength="1" title="주민번호 뒷자리 첫번째 번호를 입력하세요." placeholder="●" disabled /></span>
+							<i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i> <i aria-hidden="true">●</i>
 						</div>
 					</div>
 				</div>

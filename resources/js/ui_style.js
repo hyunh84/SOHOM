@@ -134,40 +134,28 @@ $(document).on('click focusin change', '[class^="inpResident"] input[type="text"
 	var _this = $(this);
 	var _val = _this.val();
 	var _inpBox = _this.closest('[class^="inpResident"]');
-	var _thisBox = _this.closest('[class^="resident"]');
-	var _isFocus = _inpBox.data('is-focus');
-
-	_inpBox.data('is-focus', 'true');
 
 	if(!_inpBox.hasClass('active')) {
 		_inpBox.addClass('active');
-	}else if(_inpBox.hasClass('active') && _val == ''  && _isFocus !== 'true') {
-		_inpBox.removeClass('active');
 	}
-
-	console.log();
-	
 });
 
 // Input resident Focus Out
 $(document).on('focusout', '[class^="inpResident"] input[type="text"], [class^="inpResident"] input[type="tel"], [class^="inpResident"] input[type="password"]', function() {
-	// var _this = $(this);
-	// var _val = _this.val();
-	// var _inpBox = _this.closest('[class^="inpResident"]');
-	// var _thisBox = _this.closest('[class^="resident"]');
-	// var _isValCheck = false;
+	var _this = $(this);
+	var _val = _this.val();
+	var _inpBox = _this.closest('[class^="inpResident"]');
+	var _inpItems = $('input[type="text"], input[type="tel"], input[type="password"]', _inpBox);
+	var _isActive = false;
 
-	// if(_thisBox.hasClass('resident01')){
-	// 	if($('resident01', _inpBox).val() !== '' && _val !== '') _isValCheck = true;
-	// }else if(_thisBox.hasClass('resident02')){
-	// 	if($('resident02', _inpBox).val() !== '' && _val !== '') _isValCheck = true;
-	// }
-
-	// if(!_isValCheck) {
-	// 	_inpBox.removeClass('active');
-	// }
-
-	// console.log('focusout - _isValCheck ', _isValCheck);
+	for(var i = 0; i < _inpItems.length; i++) {
+		if(_inpItems.eq(i).val() !== '') {
+			_isActive = true;
+		}
+	}
+	if(!_isActive) {
+		_inpBox.removeClass('active');
+	}
 });
 
 // Button Switch 
